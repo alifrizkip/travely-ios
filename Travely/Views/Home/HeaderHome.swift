@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HeaderHome: View {
+    @EnvironmentObject var modelData: ModelData
     @Binding var search: String
     
     var body: some View {
@@ -28,9 +29,16 @@ struct HeaderHome: View {
                     .stroke(Color.gray, lineWidth: 1)
             )
             
-            Image(uiImage: #imageLiteral(resourceName: "profile"))
-                .resizable()
-                .frame(width: 54, height: 54)
+            Button(action: {
+                withAnimation(.spring()) {
+                    modelData.selectedTab = "profile"
+                }
+            }) {
+                modelData.profile.avatar
+                    .resizable()
+                    .frame(width: 54, height: 54)
+                    .clipShape(Circle())
+            }
         }
     }
 }
@@ -39,5 +47,6 @@ struct HeaderView_Previews: PreviewProvider {
     @State static var search = ""
     static var previews: some View {
         HeaderHome(search: $search)
+            .environmentObject(ModelData())
     }
 }

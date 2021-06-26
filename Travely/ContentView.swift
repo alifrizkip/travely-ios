@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isShowDetail = false
-    @State var activeDestination: Destination = ModelData().allDestinations[0]
+    @EnvironmentObject var modelData: ModelData
     
     var body: some View {
         ZStack {
-            CustomTabbar(isShowDetail: $isShowDetail, activeDestination: $activeDestination)
-                .opacity(isShowDetail ? 0 : 1)
+            CustomTabbar()
+                .opacity(modelData.showDetail ? 0 : 1)
             
-            if isShowDetail {
-                DetailView(showDetail: $isShowDetail, destination: $activeDestination)
+            if modelData.showDetail {
+                DetailView()
             }
         }
     }

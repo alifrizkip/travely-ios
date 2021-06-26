@@ -10,9 +10,15 @@ import SwiftUI
 import Foundation
 import Combine
 
-final class ModelData: ObservableObject {
+final class ModelData: ObservableObject {    
+    @Published var selectedTab = "home"
     @Published var allDestinations: [Destination] = load("destinationsData.json")
-
+    
+    var profile = Profile(name: "Alif Rizki Pambudi",
+                          githubLabel: "github.com/alifrizkip",
+                          email: "alifrizkipambudi@gmail.com",
+                          avatarName: "avatar")
+    
     @Published var selectedCategoryID = 1
     var destinations: [Destination] {
         if selectedCategoryID == 1 {
@@ -21,6 +27,9 @@ final class ModelData: ObservableObject {
             let filteredDestinations = allDestinations.filter { $0.category.id == selectedCategoryID }
             return filteredDestinations
         }
+    }
+    var favoriteDestinations: [Destination] {
+        return allDestinations.filter { $0.isFavorite }
     }
     
     @Published var showDetail: Bool = false

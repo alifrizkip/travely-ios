@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DestinationCard: View {
+    @EnvironmentObject var modelData: ModelData
+    
     var destination: Destination
     
     var width: CGFloat
@@ -84,6 +86,7 @@ struct DestinationCardView_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { geo in
             DestinationCard(destination: ModelData().allDestinations[0], width: geo.size.width)
+                .environmentObject(ModelData())
         }
     }
 }

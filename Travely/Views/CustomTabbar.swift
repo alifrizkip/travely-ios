@@ -21,10 +21,7 @@ var tabsItems = [
 ]
 
 struct CustomTabbar: View {
-    @Binding var isShowDetail: Bool
-    @Binding var activeDestination: Destination
-    
-    @State var selectedTab = "home"
+    @EnvironmentObject var modelData: ModelData
     
     var body: some View {
         NavigationView{
@@ -34,15 +31,15 @@ struct CustomTabbar: View {
                     vertical: .bottom
                 )
             ) {
-                TabView(selection: $selectedTab) {
+                TabView(selection: $modelData.selectedTab) {
                     
-                    HomeView(isShowDetail: $isShowDetail, activeDestination: $activeDestination)
+                    HomeView()
                         .tag("home")
                     
-                    Email()
+                    FavoriteView()
                         .tag("bookmark")
                     
-                    Folder()
+                    ProfileView()
                         .tag("profile")
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
@@ -52,7 +49,7 @@ struct CustomTabbar: View {
                     
                     ForEach(tabsItems, id: \.self){tabItem in
                         
-                        TabButton(item: tabItem, selectedTab: $selectedTab)
+                        TabButton(item: tabItem, selectedTab: $modelData.selectedTab)
                         
                         if tabItem.tag != tabsItems.last?.tag{
                             Spacer(minLength: 0)
@@ -72,10 +69,8 @@ struct CustomTabbar: View {
 }
 
 struct CustomTabbar_Previews: PreviewProvider {
-    @State static var showDetail = false
-    @State static var activeDestination = ModelData().allDestinations[2]
     static var previews: some View {
-        CustomTabbar(isShowDetail: $showDetail, activeDestination: $activeDestination)
+        CustomTabbar()
             .environmentObject(ModelData())
     }
 }
@@ -95,17 +90,5 @@ struct TabButton : View {
                 .foregroundColor(selectedTab == item.tag ? Color.black : Color.gray)
                 .padding()
         }
-    }
-}
-
-struct Email : View {
-    var body: some View{
-        Color.pink
-    }
-}
-
-struct Folder : View {
-    var body: some View{
-        Color.yellow
     }
 }

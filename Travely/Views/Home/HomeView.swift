@@ -7,25 +7,9 @@
 
 import SwiftUI
 
-struct Category: Identifiable, Hashable {
-    var id: Int
-    var name: String
-    var icon: String
-}
-
 struct HomeView: View {
     @EnvironmentObject var modelData: ModelData
-
-    @Binding var isShowDetail: Bool
-    @Binding var activeDestination: Destination
-    
     @State var search = ""
-    
-    var categories = [
-        Category(id: 1, name: "Beach", icon: "🏖"),
-        Category(id: 2, name: "Forest", icon: "🌲"),
-        Category(id: 3, name: "Mountain", icon: "⛰")
-    ]
     
     var body: some View {
         VStack (alignment: .leading) {
@@ -75,8 +59,8 @@ struct HomeView: View {
                                 DestinationCard(destination: destination, width: geo.size.width)
                                     .onTapGesture {
                                         withAnimation(.spring()) {
-                                            activeDestination = destination
-                                            isShowDetail.toggle()
+                                            modelData.activeDestinationID = destination.id
+                                            modelData.showDetail.toggle()
                                         }
                                     }
                             }
@@ -93,10 +77,8 @@ struct HomeView: View {
 }
 
 struct Home_Previews: PreviewProvider {
-    @State static var showDetail = false
-    @State static var activeDestination = ModelData().allDestinations[2]
     static var previews: some View {
-        HomeView(isShowDetail: $showDetail, activeDestination: $activeDestination)
+        HomeView()
             .environmentObject(ModelData())
     }
 }

@@ -13,6 +13,19 @@ struct CategoryDestination: Hashable, Codable, Identifiable {
     var icon: String
 }
 
+struct Profile {
+    var name: String
+    var githubLabel: String
+    var email: String
+    var avatarName: String
+    var avatar: Image {
+        Image(avatarName)
+    }
+    var githubLink: String {
+        return "https://\(githubLabel)"
+    }
+}
+
 struct Destination: Hashable, Codable, Identifiable {
     var id: Int
     var isFavorite: Bool

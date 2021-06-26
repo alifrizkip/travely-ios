@@ -20,6 +20,11 @@
 		C630AAC5267F1AEA00751FD6 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C630AAC4267F1AEA00751FD6 /* ModelData.swift */; };
 		C630AAC8267F41D100751FD6 /* destinationsData.json in Resources */ = {isa = PBXBuildFile; fileRef = C630AAC7267F41D100751FD6 /* destinationsData.json */; };
 		C630AACA267F42BE00751FD6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C630AAC9267F42BE00751FD6 /* Model.swift */; };
+		C630AACC267F86FD00751FD6 /* RatingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C630AACB267F86FD00751FD6 /* RatingSection.swift */; };
+		C630AACE267F876100751FD6 /* DestinationImageBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C630AACD267F876100751FD6 /* DestinationImageBanner.swift */; };
+		C630AAD0267F879F00751FD6 /* ActionButtonSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C630AACF267F879F00751FD6 /* ActionButtonSection.swift */; };
+		C630AAD3267F8ACF00751FD6 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C630AAD2267F8ACF00751FD6 /* FavoriteView.swift */; };
+		C630AAD6267F9F9D00751FD6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C630AAD5267F9F9D00751FD6 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		C630AAC4267F1AEA00751FD6 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		C630AAC7267F41D100751FD6 /* destinationsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = destinationsData.json; sourceTree = "<group>"; };
 		C630AAC9267F42BE00751FD6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C630AACB267F86FD00751FD6 /* RatingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingSection.swift; sourceTree = "<group>"; };
+		C630AACD267F876100751FD6 /* DestinationImageBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationImageBanner.swift; sourceTree = "<group>"; };
+		C630AACF267F879F00751FD6 /* ActionButtonSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonSection.swift; sourceTree = "<group>"; };
+		C630AAD2267F8ACF00751FD6 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		C630AAD5267F9F9D00751FD6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,8 @@
 		C630AAB2267E129E00751FD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C630AAD4267F9F8900751FD6 /* Profile */,
+				C630AAD1267F8A6500751FD6 /* Favorite */,
 				C630AAC0267EE39C00751FD6 /* Detail */,
 				C630AAB5267E3CAC00751FD6 /* Home */,
 				C630AABC267ED10300751FD6 /* CustomTabbar.swift */,
@@ -115,6 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				C630AAC1267EE3CD00751FD6 /* DetailView.swift */,
+				C630AACB267F86FD00751FD6 /* RatingSection.swift */,
+				C630AACD267F876100751FD6 /* DestinationImageBanner.swift */,
+				C630AACF267F879F00751FD6 /* ActionButtonSection.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -134,6 +149,22 @@
 				C630AAC7267F41D100751FD6 /* destinationsData.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C630AAD1267F8A6500751FD6 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				C630AAD2267F8ACF00751FD6 /* FavoriteView.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		C630AAD4267F9F8900751FD6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C630AAD5267F9F9D00751FD6 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,14 +238,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C630AAC2267EE3CD00751FD6 /* DetailView.swift in Sources */,
+				C630AACC267F86FD00751FD6 /* RatingSection.swift in Sources */,
+				C630AAD3267F8ACF00751FD6 /* FavoriteView.swift in Sources */,
 				C630AABB267E3DFF00751FD6 /* HeaderHome.swift in Sources */,
 				C630AABD267ED10300751FD6 /* CustomTabbar.swift in Sources */,
 				C630AABF267EE30400751FD6 /* ContentView.swift in Sources */,
 				C630AAB9267E3DA000751FD6 /* DestinationCard.swift in Sources */,
+				C630AAD6267F9F9D00751FD6 /* ProfileView.swift in Sources */,
 				C630AAB7267E3D0900751FD6 /* FeaturedDestinationCard.swift in Sources */,
 				C630AAC5267F1AEA00751FD6 /* ModelData.swift in Sources */,
 				C630AACA267F42BE00751FD6 /* Model.swift in Sources */,
+				C630AAD0267F879F00751FD6 /* ActionButtonSection.swift in Sources */,
 				C630AAB4267E12AE00751FD6 /* HomeView.swift in Sources */,
+				C630AACE267F876100751FD6 /* DestinationImageBanner.swift in Sources */,
 				C630AAA4267E107200751FD6 /* TravelyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
