@@ -11,12 +11,23 @@ struct ContentView: View {
     @EnvironmentObject var modelData: ModelData
     
     var body: some View {
-        ZStack {
-            CustomTabbar()
-                .opacity(modelData.showDetail ? 0 : 1)
-            
-            if modelData.showDetail {
-                DetailView()
+        if !modelData.isLoading && !modelData.isError {
+            ZStack {
+                CustomTabbar()
+                    .opacity(modelData.showDetail ? 0 : 1)
+                
+                if modelData.showDetail {
+                    DetailView()
+                }
+            }
+        } else {
+            VStack {
+                Image(systemName: modelData.onboardIcon)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 75)
+                Text(modelData.onboardMessage)
+                    .font(.largeTitle)
             }
         }
     }

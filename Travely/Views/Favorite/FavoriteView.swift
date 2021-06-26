@@ -10,8 +10,6 @@ import SwiftUI
 struct FavoriteView: View {
     @EnvironmentObject var modelData: ModelData
     
-    var destination = ModelData().allDestinations[0]
-    
     var body: some View {
         VStack (alignment: .center) {
             HStack {

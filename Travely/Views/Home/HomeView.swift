@@ -23,10 +23,12 @@ struct HomeView: View {
                         .padding(.top, 30)
                         .padding(.bottom, 20)
                     
-                    GeometryReader { geo in
-                        FeaturedDestinationCard(destination: modelData.featuredDestination, width: geo.size.width)
+                    if (modelData.featuredDestination != nil) {
+                        GeometryReader { geo in
+                            FeaturedDestinationCard(destination: modelData.featuredDestination!, width: geo.size.width)
+                        }
+                        .aspectRatio(354/210, contentMode: .fit)
                     }
-                    .aspectRatio(354/210, contentMode: .fit)
                     
                     Text("Categories")
                         .font(.title2)

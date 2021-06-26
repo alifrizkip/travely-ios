@@ -9,10 +9,18 @@ import SwiftUI
 
 import Foundation
 import Combine
+import Alamofire
+
+extension Array {
+    subscript(safe index: Index) -> Element? {
+        let isValidIndex = index >= 0 && index < count
+        return isValidIndex ? self[index] : nil
+    }
+}
 
 final class ModelData: ObservableObject {    
     @Published var selectedTab = "home"
-    @Published var allDestinations: [Destination] = load("destinationsData.json")
+    @Published var allDestinations: [Destination] = []
     
     var profile = Profile(name: "Alif Rizki Pambudi",
                           githubLabel: "github.com/alifrizkip",
@@ -39,8 +47,8 @@ final class ModelData: ObservableObject {
     }
     
     @Published var featuredIndex = 0
-    var featuredDestination: Destination {
-        return allDestinations[featuredIndex]
+    var featuredDestination: Destination? {
+        return allDestinations[safe: featuredIndex]
     }
     
     var categories: [CategoryDestination] = [
@@ -51,29 +59,42 @@ final class ModelData: ObservableObject {
         CategoryDestination(id: 5, name: "Mountain", icon: "⛰"),
     ]
     
+    @Published var isLoading: Bool = true
+    @Published var onboardIcon: String = "tray.and.arrow.down"
+    @Published var onboardMessage: String = "Loading Data..."
+    @Published var isError: Bool = false
+    init() {
+        AF.request("https://dicoding-ios-app-pemula-api.web.app/destinations.json").response { response in
+            switch response.result {
+            case .success:
+                if let jsonData = response.data {
+                    let jsonDecoder = JSONDecoder()
+                    do {
+                        let destinationsDatas = try jsonDecoder.decode([Destination].self, from: jsonData)
+                        print("success: load api n parsing data")
+                        self.isLoading = false
+                        self.allDestinations = destinationsDatas
+                    } catch _{
+                        print("error: parsing json data")
+                        self.isLoading = false
+                        self.setErrorLoadData()
+                    }
+                }
+            case .failure(_):
+                print("error: load data from api")
+                self.setErrorLoadData()
+            }
+        }
+    }
+    
+    func setErrorLoadData() -> Void {
+        self.isLoading = false
+        self.isError = true
+        self.onboardIcon = "xmark.circle"
+        self.onboardMessage = "Failed Load Data"
+    }
+    
     func changeFeatured(_ index: Int) -> Void {
         featuredIndex = index
-    }
-}
-
-func load<T: Codable>(_ filename: String) -> T {
-    let data: Data
-    
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-    else {
-        fatalError("Couldn't find \(filename) in main bundle.")
-    }
-    
-    do {
-        data = try Data(contentsOf: file)
-    } catch {
-        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
-    }
-    
-    do {
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    } catch {
-        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
