@@ -19,7 +19,7 @@ struct FavoriteView: View {
 
         Spacer(minLength: 0)
       }
-      if modelData.favoriteDestinations.count > 0 {
+      if modelData.favoriteDestinations.isEmpty == false {
         ScrollView {
           VStack(spacing: 20) {
             ForEach(modelData.favoriteDestinations, id: \.self) { item in

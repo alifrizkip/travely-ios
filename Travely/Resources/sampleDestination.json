@@ -1,0 +1,20 @@
+{
+  "id": 3,
+  "isFavorite": false,
+  "name": "Ulun Danu",
+  "location": "Bali, Indonesia",
+  "price": "$230",
+  "imageName": "ulundanu",
+  "rating": "4.3",
+  "ratingCount": "4.3k reviews",
+  "duration": "3h",
+  "weather": "Cloudy",
+  "weatherIcon": "cloud.fill",
+  "weatherTemperature": "20 C",
+  "category": {
+    "id": 3,
+    "name": "Building",
+    "icon": "🏛"
+  },
+  "description": "Pura Ulun Danu Beratan, or Pura Bratan, is a major Hindu Shaivite Shiva temple in Bali, Indonesia. The temple complex is on the shores of Lake Bratan in the mountains near Bedugul. The water from the lake serves the entire region in the outflow area; downstream there are many smaller water temples that are specific to each irrigation association"
+}

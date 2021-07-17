@@ -15,7 +15,7 @@ struct DetailView: View {
   }
 
   var destinationIndex: Int {
-    modelData.allDestinations.firstIndex(where: { $0.id == destination.id })!
+    return modelData.allDestinations.firstIndex { $0.id == destination.id }!
   }
 
   var body: some View {
@@ -71,12 +71,9 @@ struct DetailView: View {
         }
         .padding(.bottom, 80)
 
-        ActionButtonSection(
-          isFavorite: $modelData.allDestinations[destinationIndex].isFavorite,
-          bookingCallback: {
-            modelData.changeFeatured(destinationIndex)
-          }
-        )
+        ActionButtonSection(isFavorite: $modelData.allDestinations[destinationIndex].isFavorite) {
+          modelData.changeFeatured(destinationIndex)
+        }
       }
     }
     .foregroundColor(Color("PrimaryText"))

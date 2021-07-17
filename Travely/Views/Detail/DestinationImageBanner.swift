@@ -26,11 +26,11 @@ struct DestinationImageBanner: View {
         .clipped()
 
       HStack {
-        Button(action: {
+        Button {
           withAnimation(.spring()) {
             showDetail.toggle()
           }
-        }) {
+        } label: {
           ZStack {
             Circle()
               .frame(width: 54, height: 54)
@@ -47,9 +47,9 @@ struct DestinationImageBanner: View {
 
         Spacer()
 
-        Button(action: {
+        Button {
           withAnimation(.spring()) {}
-        }) {
+        } label: {
           ZStack {
             Circle()
               .frame(width: 54, height: 54)

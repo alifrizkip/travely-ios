@@ -15,11 +15,11 @@ struct ActionButtonSection: View {
   var body: some View {
     HStack(spacing: 20) {
       // MARK: bookmark button
-      Button(action: {
+      Button {
         withAnimation(.spring()) {
           isFavorite.toggle()
         }
-      }) {
+      } label: {
         ZStack {
           Circle()
             .stroke(Color.gray, lineWidth: 1)
@@ -34,11 +34,11 @@ struct ActionButtonSection: View {
       }
 
       // MARK: change featured button
-      Button(action: {
+      Button {
         withAnimation(.spring()) {
           bookingCallback()
         }
-      }) {
+      } label: {
         ZStack {
           RoundedRectangle(cornerRadius: 25)
             .frame(height: 54)

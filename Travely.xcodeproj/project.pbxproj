@@ -26,6 +26,7 @@
 		C630AAD3267F8ACF00751FD6 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C630AAD2267F8ACF00751FD6 /* FavoriteView.swift */; };
 		C630AAD6267F9F9D00751FD6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C630AAD5267F9F9D00751FD6 /* ProfileView.swift */; };
 		C631B99D2686EDD700C3C77B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C631B99C2686EDD700C3C77B /* Alamofire */; };
+		C66C869626A32BB500CEC2E2 /* sampleDestination.json in Resources */ = {isa = PBXBuildFile; fileRef = C66C869526A32BB500CEC2E2 /* sampleDestination.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		C630AACF267F879F00751FD6 /* ActionButtonSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonSection.swift; sourceTree = "<group>"; };
 		C630AAD2267F8ACF00751FD6 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		C630AAD5267F9F9D00751FD6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C66C869526A32BB500CEC2E2 /* sampleDestination.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sampleDestination.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				C630AAC7267F41D100751FD6 /* destinationsData.json */,
+				C66C869526A32BB500CEC2E2 /* sampleDestination.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			files = (
 				C630AAAB267E107500751FD6 /* Preview Assets.xcassets in Resources */,
 				C630AAC8267F41D100751FD6 /* destinationsData.json in Resources */,
+				C66C869626A32BB500CEC2E2 /* sampleDestination.json in Resources */,
 				C630AAA8267E107500751FD6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +262,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "PATH=/opt/homebrew/bin:$PATH\nif [ -f ~/com.raywenderlich.swiftlint.yml ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache --config ~/com.raywenderlich.swiftlint.yml\n  fi\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

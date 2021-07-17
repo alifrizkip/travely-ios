@@ -32,7 +32,6 @@ struct CustomTabbar: View {
         )
       ) {
         TabView(selection: $modelData.selectedTab) {
-
           HomeView()
             .tag("home")
 
@@ -43,12 +42,10 @@ struct CustomTabbar: View {
             .tag("profile")
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        .padding(.bottom, 80)
+        .padding(.bottom, 90)
 
         HStack(spacing: 0) {
-
           ForEach(tabsItems, id: \.self) {tabItem in
-
             TabButton(item: tabItem, selectedTab: $modelData.selectedTab)
 
             if tabItem.tag != tabsItems.last?.tag {
@@ -80,12 +77,10 @@ struct TabButton: View {
   @Binding var selectedTab: String
 
   var body: some View {
-
-    Button(action: {selectedTab = item.tag}) {
-
+    Button { selectedTab = item.tag } label: {
       Image(systemName: item.icon)
         .resizable()
-        .aspectRatio(1/1, contentMode: .fit)
+        .aspectRatio(1 / 1, contentMode: .fit)
         .frame(height: 25)
         .foregroundColor(selectedTab == item.tag ? Color.black : Color.gray)
         .padding()

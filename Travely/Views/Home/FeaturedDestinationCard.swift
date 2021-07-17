@@ -96,7 +96,6 @@ struct FeaturedDestinationCard: View {
     }
     .frame(width: width, height: height)
   }
-
 }
 
 struct FeaturedDestinationCardView_Previews: PreviewProvider {

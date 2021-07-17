@@ -20,12 +20,9 @@ extension Array {
 
 final class ModelData: ObservableObject {
   @Published var selectedTab = "home"
-  @Published var allDestinations: [Destination] = load("destinationsData.json")
+  @Published var allDestinations: [Destination] = [load("sampleDestination.json")]
 
-  var profile = Profile(name: "Alif Rizki Pambudi",
-                        githubLabel: "github.com/alifrizkip",
-                        email: "alifrizkipambudi@gmail.com",
-                        avatarName: "avatar")
+  var profile = Profile(name: "Alif Rizki Pambudi", githubLabel: "github.com/alifrizkip", email: "alifrizkipambudi@gmail.com", avatarName: "avatar")
 
   @Published var selectedCategoryID = 1
   var destinations: [Destination] {
@@ -40,15 +37,15 @@ final class ModelData: ObservableObject {
     return allDestinations.filter { $0.isFavorite }
   }
 
-  @Published var showDetail: Bool = false
+  @Published var showDetail = false
   @Published var activeDestinationID: Int = 1
   var activeDestination: Destination {
-    return allDestinations.first(where: { $0.id == activeDestinationID}) ?? allDestinations[0]
+    return allDestinations.first { $0.id == activeDestinationID } ?? allDestinations[0]
   }
 
   @Published var featuredIndex = 0
-  var featuredDestination: Destination? {
-    return allDestinations[safe: featuredIndex]
+  var featuredDestination: Destination {
+    return allDestinations[featuredIndex]
   }
 
   var categories: [CategoryDestination] = [
@@ -59,10 +56,10 @@ final class ModelData: ObservableObject {
     CategoryDestination(id: 5, name: "Mountain", icon: "⛰")
   ]
 
-  @Published var isLoading: Bool = true
+  @Published var isLoading = true
   @Published var onboardIcon: String = "tray.and.arrow.down"
   @Published var onboardMessage: String = "Loading Data..."
-  @Published var isError: Bool = false
+  @Published var isError = false
   init() {
     AF.request("https://dicoding-ios-app-pemula-api.web.app/destinations.json").response { response in
       switch response.result {

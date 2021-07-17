@@ -39,10 +39,12 @@ struct ProfileView: View {
         .font(.title)
         .padding(.top)
 
-      Link(profile.githubLabel, destination: URL(string: profile.githubLink)!)
-        .font(.title2)
-        .padding(.top, 5)
-        .foregroundColor(.blue)
+      if let githubLink = URL(string: profile.githubLink) {
+        Link(profile.githubLabel, destination: githubLink)
+          .font(.title2)
+          .padding(.top, 5)
+          .foregroundColor(.blue)
+      }
 
       HStack {
         Image(systemName: "envelope.fill")

@@ -29,11 +29,11 @@ struct HeaderHome: View {
           .stroke(Color.gray, lineWidth: 1)
       )
 
-      Button(action: {
+      Button {
         withAnimation(.spring()) {
           modelData.selectedTab = "profile"
         }
-      }) {
+      } label: {
         modelData.profile.avatar
           .resizable()
           .frame(width: 54, height: 54)

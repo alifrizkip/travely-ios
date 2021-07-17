@@ -23,12 +23,10 @@ struct HomeView: View {
             .padding(.top, 30)
             .padding(.bottom, 20)
 
-          if modelData.featuredDestination != nil {
-            GeometryReader { geo in
-              FeaturedDestinationCard(destination: modelData.featuredDestination!, width: geo.size.width)
-            }
-            .aspectRatio(354/210, contentMode: .fit)
+          GeometryReader { geo in
+            FeaturedDestinationCard(destination: modelData.featuredDestination, width: geo.size.width)
           }
+          .aspectRatio(354 / 210, contentMode: .fit)
 
           Text("Categories")
             .font(.title2)
@@ -70,7 +68,6 @@ struct HomeView: View {
             }
           }
         }
-
       }
     }
     .foregroundColor(Color("PrimaryText"))
@@ -90,11 +87,11 @@ struct CategoryItem: View {
   var category: CategoryDestination
 
   var body: some View {
-    Button(action: {
+    Button {
       withAnimation(.spring()) {
         selectedCategoryID = category.id
       }
-    }) {
+    } label: {
       HStack(alignment: .center, spacing: 16) {
         Text(category.icon)
         Text(category.name)
