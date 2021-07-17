@@ -9,21 +9,21 @@ import SwiftUI
 
 struct ProfileView: View {
   @EnvironmentObject var modelData: ModelData
-  
+
   var profile: Profile {
     return modelData.profile
   }
-  
+
   var body: some View {
-    VStack (alignment: .center) {
+    VStack(alignment: .center) {
       HStack {
         Text("About me")
           .font(.title)
           .padding(.top, 10)
-        
+
         Spacer(minLength: 0)
       }
-      
+
       profile.avatar
         .resizable()
         .aspectRatio(contentMode: .fill)
@@ -34,24 +34,24 @@ struct ProfileView: View {
         )
         .clipShape(Circle())
         .padding(.top, 100)
-      
+
       Text(profile.name)
         .font(.title)
         .padding(.top)
-      
+
       Link(profile.githubLabel, destination: URL(string: profile.githubLink)!)
         .font(.title2)
         .padding(.top, 5)
         .foregroundColor(.blue)
-      
+
       HStack {
         Image(systemName: "envelope.fill")
-        
+
         Text(profile.email)
       }
       .font(.title2)
       .padding(.top, 5)
-      
+
       Spacer(minLength: 0)
     }
     .padding(.horizontal, 30)

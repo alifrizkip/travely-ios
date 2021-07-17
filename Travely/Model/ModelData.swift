@@ -18,7 +18,7 @@ extension Array {
   }
 }
 
-final class ModelData: ObservableObject {    
+final class ModelData: ObservableObject {
   @Published var selectedTab = "home"
   @Published var allDestinations: [Destination] = load("destinationsData.json")
 
@@ -45,12 +45,12 @@ final class ModelData: ObservableObject {
   var activeDestination: Destination {
     return allDestinations.first(where: { $0.id == activeDestinationID}) ?? allDestinations[0]
   }
-  
+
   @Published var featuredIndex = 0
   var featuredDestination: Destination? {
     return allDestinations[safe: featuredIndex]
   }
-  
+
   var categories: [CategoryDestination] = [
     CategoryDestination(id: 1, name: "All", icon: "✈️"),
     CategoryDestination(id: 2, name: "Beach", icon: "🏖"),
@@ -58,7 +58,7 @@ final class ModelData: ObservableObject {
     CategoryDestination(id: 4, name: "Forest", icon: "🌲"),
     CategoryDestination(id: 5, name: "Mountain", icon: "⛰")
   ]
-  
+
   @Published var isLoading: Bool = true
   @Published var onboardIcon: String = "tray.and.arrow.down"
   @Published var onboardMessage: String = "Loading Data..."

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-var tabs = ["home","bookmark","profile"]
+var tabs = ["home", "bookmark", "profile"]
 
 struct TabItem: Hashable {
   var tag: String
@@ -17,14 +17,14 @@ struct TabItem: Hashable {
 var tabsItems = [
   TabItem(tag: "home", icon: "house.fill"),
   TabItem(tag: "bookmark", icon: "bookmark.fill"),
-  TabItem(tag: "profile", icon: "person.fill"),
+  TabItem(tag: "profile", icon: "person.fill")
 ]
 
 struct CustomTabbar: View {
   @EnvironmentObject var modelData: ModelData
-  
+
   var body: some View {
-    NavigationView{
+    NavigationView {
       ZStack(
         alignment: Alignment(
           horizontal: .center,
@@ -32,26 +32,26 @@ struct CustomTabbar: View {
         )
       ) {
         TabView(selection: $modelData.selectedTab) {
-          
+
           HomeView()
             .tag("home")
-          
+
           FavoriteView()
             .tag("bookmark")
-          
+
           ProfileView()
             .tag("profile")
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .padding(.bottom, 80)
-        
-        HStack(spacing: 0){
-          
-          ForEach(tabsItems, id: \.self){tabItem in
-            
+
+        HStack(spacing: 0) {
+
+          ForEach(tabsItems, id: \.self) {tabItem in
+
             TabButton(item: tabItem, selectedTab: $modelData.selectedTab)
-            
-            if tabItem.tag != tabsItems.last?.tag{
+
+            if tabItem.tag != tabsItems.last?.tag {
               Spacer(minLength: 0)
             }
           }
@@ -75,14 +75,14 @@ struct CustomTabbar_Previews: PreviewProvider {
   }
 }
 
-struct TabButton : View {
+struct TabButton: View {
   var item: TabItem
-  @Binding var selectedTab : String
-  
-  var body: some View{
-    
+  @Binding var selectedTab: String
+
+  var body: some View {
+
     Button(action: {selectedTab = item.tag}) {
-      
+
       Image(systemName: item.icon)
         .resizable()
         .aspectRatio(1/1, contentMode: .fit)

@@ -9,16 +9,16 @@ import SwiftUI
 
 struct DestinationCard: View {
   @EnvironmentObject var modelData: ModelData
-  
+
   var destination: Destination
-  
+
   var width: CGFloat
   var height: CGFloat {
     return width / 167 * 180
   }
-  
+
   var body: some View {
-    ZStack (alignment: .bottomLeading) {
+    ZStack(alignment: .bottomLeading) {
       destination.image
         .resizable()
         .aspectRatio(contentMode: .fill)
@@ -29,7 +29,7 @@ struct DestinationCard: View {
         )
         .clipped()
         .cornerRadius(20)
-      
+
       Rectangle()
         .foregroundColor(.clear)
         .background(
@@ -41,16 +41,16 @@ struct DestinationCard: View {
           )
         )
         .cornerRadius(20)
-      
-      VStack (alignment: .leading) {
+
+      VStack(alignment: .leading) {
         HStack {
           Spacer(minLength: 0)
-          
+
           ZStack {
             Circle()
               .frame(width: 30, height: 30)
               .foregroundColor(Color("BadgeBackground"))
-            
+
             Image(systemName: destination.isFavorite ? "bookmark.fill" : "bookmark")
               .resizable()
               .aspectRatio(contentMode: .fit)
@@ -58,18 +58,18 @@ struct DestinationCard: View {
               .foregroundColor(.white)
           }
         }
-        
+
         Spacer(minLength: 0)
-        
+
         Text(destination.name)
           .foregroundColor(.white)
-        
-        HStack (alignment: .firstTextBaseline) {
+
+        HStack(alignment: .firstTextBaseline) {
           Image(systemName: "map.fill")
             .font(.system(size: 12))
-          
+
           Text(destination.location)
-          
+
           Spacer(minLength: 0)
         }
         .font(.caption)
@@ -80,7 +80,6 @@ struct DestinationCard: View {
     .frame(width: width, height: height)
   }
 }
-
 
 struct DestinationCardView_Previews: PreviewProvider {
   static var previews: some View {

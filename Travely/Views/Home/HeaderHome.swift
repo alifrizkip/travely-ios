@@ -10,14 +10,14 @@ import SwiftUI
 struct HeaderHome: View {
   @EnvironmentObject var modelData: ModelData
   @Binding var search: String
-  
+
   var body: some View {
-    HStack (spacing: 20) {
+    HStack(spacing: 20) {
       HStack {
         Image(systemName: "magnifyingglass")
           .font(.system(size: 23, weight: .light))
           .foregroundColor(.gray)
-        
+
         TextField("Search...", text: $search)
           .font(.system(size: 20))
       }
@@ -28,7 +28,7 @@ struct HeaderHome: View {
         RoundedRectangle(cornerRadius: 27)
           .stroke(Color.gray, lineWidth: 1)
       )
-      
+
       Button(action: {
         withAnimation(.spring()) {
           modelData.selectedTab = "profile"

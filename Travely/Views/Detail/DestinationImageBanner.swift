@@ -9,12 +9,12 @@ import SwiftUI
 
 struct DestinationImageBanner: View {
   @Binding var showDetail: Bool
-  
+
   var destinationImage: Image
   var width: CGFloat
-  
+
   var body: some View {
-    ZStack (alignment: .top) {
+    ZStack(alignment: .top) {
       destinationImage
         .resizable()
         .aspectRatio(contentMode: .fill)
@@ -24,7 +24,7 @@ struct DestinationImageBanner: View {
           alignment: Alignment(horizontal: .center, vertical: .center)
         )
         .clipped()
-      
+
       HStack {
         Button(action: {
           withAnimation(.spring()) {
@@ -35,7 +35,7 @@ struct DestinationImageBanner: View {
             Circle()
               .frame(width: 54, height: 54)
               .foregroundColor(Color("BadgeBackground"))
-            
+
             Image(systemName: "chevron.backward")
               .resizable()
               .aspectRatio(1 / 2, contentMode: .fit)
@@ -44,9 +44,9 @@ struct DestinationImageBanner: View {
               .offset(x: -2)
           }
         }
-        
+
         Spacer()
-        
+
         Button(action: {
           withAnimation(.spring()) {}
         }) {
@@ -54,7 +54,7 @@ struct DestinationImageBanner: View {
             Circle()
               .frame(width: 54, height: 54)
               .foregroundColor(Color("BadgeBackground"))
-            
+
             Image(systemName: "link")
               .resizable()
               .frame(width: 25, height: 25)

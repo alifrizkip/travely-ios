@@ -9,14 +9,14 @@ import SwiftUI
 
 struct FeaturedDestinationCard: View {
   var destination: Destination
-  
+
   var width: CGFloat
   var height: CGFloat {
     return width / 354 * 210
   }
-  
+
   var body: some View {
-    ZStack (alignment: .bottomLeading) {
+    ZStack(alignment: .bottomLeading) {
       destination.image
         .resizable()
         .aspectRatio(contentMode: .fill)
@@ -27,7 +27,7 @@ struct FeaturedDestinationCard: View {
         )
         .clipped()
         .cornerRadius(20)
-      
+
       Rectangle()
         .foregroundColor(.clear)
         .background(
@@ -39,34 +39,34 @@ struct FeaturedDestinationCard: View {
           )
         )
         .cornerRadius(20)
-      
-      VStack (alignment: .leading) {
+
+      VStack(alignment: .leading) {
         HStack {
           ZStack {
             RoundedRectangle(cornerRadius: 25)
               .foregroundColor(.gray)
               .frame(width: 65, height: 25)
-            
+
             HStack {
               Image(systemName: "star.fill")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 15)
                 .foregroundColor(.yellow)
-              
+
               Text(destination.rating)
                 .foregroundColor(.white)
                 .fontWeight(.semibold)
             }
           }
-          
+
           Spacer(minLength: 0)
-          
+
           ZStack {
             Circle()
               .frame(width: 30, height: 30)
               .foregroundColor(Color("BadgeBackground"))
-            
+
             Image(systemName: destination.isFavorite ? "bookmark.fill" : "bookmark")
               .resizable()
               .aspectRatio(contentMode: .fit)
@@ -74,20 +74,20 @@ struct FeaturedDestinationCard: View {
               .foregroundColor(.white)
           }
         }
-        
+
         Spacer(minLength: 0)
-        
+
         Text(destination.name)
           .foregroundColor(.white)
           .font(.title3)
-        
-        HStack (alignment: .firstTextBaseline) {
+
+        HStack(alignment: .firstTextBaseline) {
           Image(systemName: "map.fill")
             .font(.system(size: 12))
-          
+
           Text(destination.location)
             .font(.subheadline)
-          
+
           Spacer(minLength: 0)
         }
         .foregroundColor(.white)
@@ -96,7 +96,7 @@ struct FeaturedDestinationCard: View {
     }
     .frame(width: width, height: height)
   }
-  
+
 }
 
 struct FeaturedDestinationCardView_Previews: PreviewProvider {
