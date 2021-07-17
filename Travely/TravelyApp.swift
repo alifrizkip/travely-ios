@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct TravelyApp: App {
-    @StateObject private var modelData = ModelData()
-    
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environmentObject(modelData)
-        }
+  @StateObject private var modelData = ModelData()
+
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+        .environmentObject(modelData)
     }
+  }
 }

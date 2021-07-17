@@ -1,141 +1,141 @@
 [{
-    "id": 1,
-    "isFavorite": true,
-    "name": "Cinque Terre",
-    "location": "Liguria, Italy",
-    "price": "$210",
-    "imageName": "cinqueterre",
-    "rating": "4.1",
-    "ratingCount": "4.1k reviews",
-    "duration": "1h",
+  "id": 1,
+  "isFavorite": true,
+  "name": "Cinque Terre",
+  "location": "Liguria, Italy",
+  "price": "$210",
+  "imageName": "cinqueterre",
+  "rating": "4.1",
+  "ratingCount": "4.1k reviews",
+  "duration": "1h",
+  "weather": "Sunny",
+  "weatherIcon": "sun.max.fill",
+  "weatherTemperature": "31 C",
+  "category": {
+    "id": 2,
+    "name": "Beach",
+    "icon": "🏖"
+  },
+  "description": "The Cinque Terre is a coastal area within Liguria, in the northwest of Italy. It lies in the west of La Spezia Province, and comprises five villages: Monterosso al Mare, Vernazza, Corniglia, Manarola, and Riomaggiore. The coastline, the five villages, and the surrounding hillsides are all part of the Cinque Terre National Park, a UNESCO World Heritage Site."
+},
+  {
+    "id": 2,
+    "isFavorite": false,
+    "name": "Waikiki Beach",
+    "location": "Hawaii, US",
+    "price": "$220",
+    "imageName": "waikikibeach",
+    "rating": "4.2",
+    "ratingCount": "4.2k reviews",
+    "duration": "2h",
     "weather": "Sunny",
     "weatherIcon": "sun.max.fill",
     "weatherTemperature": "31 C",
     "category": {
-        "id": 2,
-        "name": "Beach",
-        "icon": "🏖"
+      "id": 2,
+      "name": "Beach",
+      "icon": "🏖"
     },
-    "description": "The Cinque Terre is a coastal area within Liguria, in the northwest of Italy. It lies in the west of La Spezia Province, and comprises five villages: Monterosso al Mare, Vernazza, Corniglia, Manarola, and Riomaggiore. The coastline, the five villages, and the surrounding hillsides are all part of the Cinque Terre National Park, a UNESCO World Heritage Site."
-},
-    {
-        "id": 2,
-        "isFavorite": false,
-        "name": "Waikiki Beach",
-        "location": "Hawaii, US",
-        "price": "$220",
-        "imageName": "waikikibeach",
-        "rating": "4.2",
-        "ratingCount": "4.2k reviews",
-        "duration": "2h",
-        "weather": "Sunny",
-        "weatherIcon": "sun.max.fill",
-        "weatherTemperature": "31 C",
-        "category": {
-            "id": 2,
-            "name": "Beach",
-            "icon": "🏖"
-        },
-        "description": "Waikiki is a neighborhood of Honolulu on the south shore of the island of Oahu in the U.S. state of Hawaii.         Waikiki is most famous for Waikiki Beach, which is one of six beaches in the district, along with Queens Beach, Kuhio Beach, Grays Beach, Fort DeRussy Beach and Kahanamoku Beach. Waikiki Beach is almost entirely man-made.         Waikiki is home to public places including Kapiʻolani Park, Fort DeRussy, Kahanamoku Lagoon, Kūhiō Beach Park and Ala Wai Harbor. Waikiki was the first capital of the Kingdom of Hawaii from 1795 to 1796."
+    "description": "Waikiki is a neighborhood of Honolulu on the south shore of the island of Oahu in the U.S. state of Hawaii.         Waikiki is most famous for Waikiki Beach, which is one of six beaches in the district, along with Queens Beach, Kuhio Beach, Grays Beach, Fort DeRussy Beach and Kahanamoku Beach. Waikiki Beach is almost entirely man-made.         Waikiki is home to public places including Kapiʻolani Park, Fort DeRussy, Kahanamoku Lagoon, Kūhiō Beach Park and Ala Wai Harbor. Waikiki was the first capital of the Kingdom of Hawaii from 1795 to 1796."
+  },
+  {
+    "id": 3,
+    "isFavorite": false,
+    "name": "Ulun Danu",
+    "location": "Bali, Indonesia",
+    "price": "$230",
+    "imageName": "ulundanu",
+    "rating": "4.3",
+    "ratingCount": "4.3k reviews",
+    "duration": "3h",
+    "weather": "Cloudy",
+    "weatherIcon": "cloud.fill",
+    "weatherTemperature": "20 C",
+    "category": {
+      "id": 3,
+      "name": "Building",
+      "icon": "🏛"
     },
-    {
-        "id": 3,
-        "isFavorite": false,
-        "name": "Ulun Danu",
-        "location": "Bali, Indonesia",
-        "price": "$230",
-        "imageName": "ulundanu",
-        "rating": "4.3",
-        "ratingCount": "4.3k reviews",
-        "duration": "3h",
-        "weather": "Cloudy",
-        "weatherIcon": "cloud.fill",
-        "weatherTemperature": "20 C",
-        "category": {
-            "id": 3,
-            "name": "Building",
-            "icon": "🏛"
-        },
-        "description": "Pura Ulun Danu Beratan, or Pura Bratan, is a major Hindu Shaivite Shiva temple in Bali, Indonesia. The temple complex is on the shores of Lake Bratan in the mountains near Bedugul. The water from the lake serves the entire region in the outflow area; downstream there are many smaller water temples that are specific to each irrigation association"
+    "description": "Pura Ulun Danu Beratan, or Pura Bratan, is a major Hindu Shaivite Shiva temple in Bali, Indonesia. The temple complex is on the shores of Lake Bratan in the mountains near Bedugul. The water from the lake serves the entire region in the outflow area; downstream there are many smaller water temples that are specific to each irrigation association"
+  },
+  {
+    "id": 4,
+    "isFavorite": false,
+    "name": "Tokyo Skytree",
+    "location": "Tokyo, Japan",
+    "price": "$240",
+    "imageName": "tokyosky",
+    "rating": "4.4",
+    "ratingCount": "4.4k reviews",
+    "duration": "4h",
+    "weather": "Night",
+    "weatherIcon": "moon.stars.fill",
+    "weatherTemperature": "15 C",
+    "category": {
+      "id": 3,
+      "name": "Building",
+      "icon": "🏛"
     },
-    {
-        "id": 4,
-        "isFavorite": false,
-        "name": "Tokyo Skytree",
-        "location": "Tokyo, Japan",
-        "price": "$240",
-        "imageName": "tokyosky",
-        "rating": "4.4",
-        "ratingCount": "4.4k reviews",
-        "duration": "4h",
-        "weather": "Night",
-        "weatherIcon": "moon.stars.fill",
-        "weatherTemperature": "15 C",
-        "category": {
-            "id": 3,
-            "name": "Building",
-            "icon": "🏛"
-        },
-        "description": "Tokyo Skytree (東京スカイツリー, Tōkyō Sukaitsurī, stylized TOKYO SKYTREE) is a broadcasting and observation tower in Sumida, Tokyo. It became the tallest structure in Japan in 2010 and reached its full height of 634 meters (2,080 ft) in March 2011, making it the tallest tower in the world, displacing the Canton Tower, and the second tallest structure in the world after the Burj Khalifa (829.8 m/2,722 ft)."
+    "description": "Tokyo Skytree (東京スカイツリー, Tōkyō Sukaitsurī, stylized TOKYO SKYTREE) is a broadcasting and observation tower in Sumida, Tokyo. It became the tallest structure in Japan in 2010 and reached its full height of 634 meters (2,080 ft) in March 2011, making it the tallest tower in the world, displacing the Canton Tower, and the second tallest structure in the world after the Burj Khalifa (829.8 m/2,722 ft)."
+  },
+  {
+    "id": 5,
+    "isFavorite": false,
+    "name": "Amazon Forest",
+    "location": "Brazil",
+    "price": "$250",
+    "imageName": "amazonforest",
+    "rating": "4.5",
+    "ratingCount": "4.5k reviews",
+    "duration": "5h",
+    "weather": "Rainy",
+    "weatherIcon": "cloud.sun.rain.fill",
+    "weatherTemperature": "15 C",
+    "category": {
+      "id": 4,
+      "name": "Forest",
+      "icon": "🌲"
     },
-    {
-        "id": 5,
-        "isFavorite": false,
-        "name": "Amazon Forest",
-        "location": "Brazil",
-        "price": "$250",
-        "imageName": "amazonforest",
-        "rating": "4.5",
-        "ratingCount": "4.5k reviews",
-        "duration": "5h",
-        "weather": "Rainy",
-        "weatherIcon": "cloud.sun.rain.fill",
-        "weatherTemperature": "15 C",
-        "category": {
-            "id": 4,
-            "name": "Forest",
-            "icon": "🌲"
-        },
-        "description": "The Amazon rainforest, alternatively, the Amazon jungle or Amazonia, is a moist broadleaf tropical rainforest in the Amazon biome that covers most of the Amazon basin of South America. This basin encompasses 7,000,000 km2 (2,700,000 sq mi), of which 5,500,000 km2 (2,100,000 sq mi) are covered by the rainforest. This region includes territory belonging to nine nations and 3,344 formally acknowledged indigenous territories."
+    "description": "The Amazon rainforest, alternatively, the Amazon jungle or Amazonia, is a moist broadleaf tropical rainforest in the Amazon biome that covers most of the Amazon basin of South America. This basin encompasses 7,000,000 km2 (2,700,000 sq mi), of which 5,500,000 km2 (2,100,000 sq mi) are covered by the rainforest. This region includes territory belonging to nine nations and 3,344 formally acknowledged indigenous territories."
+  },
+  {
+    "id": 6,
+    "isFavorite": true,
+    "name": "Machu Picchu",
+    "location": "Peru",
+    "price": "$260",
+    "imageName": "machupicchu",
+    "rating": "4.6",
+    "ratingCount": "4.6k reviews",
+    "duration": "6h",
+    "weather": "Cloudy",
+    "weatherIcon": "cloud.fill",
+    "weatherTemperature": "15 C",
+    "category": {
+      "id": 5,
+      "name": "Mountain",
+      "icon": "⛰"
     },
-    {
-        "id": 6,
-        "isFavorite": true,
-        "name": "Machu Picchu",
-        "location": "Peru",
-        "price": "$260",
-        "imageName": "machupicchu",
-        "rating": "4.6",
-        "ratingCount": "4.6k reviews",
-        "duration": "6h",
-        "weather": "Cloudy",
-        "weatherIcon": "cloud.fill",
-        "weatherTemperature": "15 C",
-        "category": {
-            "id": 5,
-            "name": "Mountain",
-            "icon": "⛰"
-        },
-        "description": "Machu Picchu is a 15th-century Inca citadel, located in the Eastern Cordillera of southern Peru, on a 2,430-meter (7,970 ft) mountain ridge. It is located in the Machupicchu District within Urubamba Province above the Sacred Valley, which is 80 kilometers (50 mi) northwest of Cuzco. The Urubamba River flows past it, cutting through the Cordillera and creating a canyon with a tropical mountain climate."
+    "description": "Machu Picchu is a 15th-century Inca citadel, located in the Eastern Cordillera of southern Peru, on a 2,430-meter (7,970 ft) mountain ridge. It is located in the Machupicchu District within Urubamba Province above the Sacred Valley, which is 80 kilometers (50 mi) northwest of Cuzco. The Urubamba River flows past it, cutting through the Cordillera and creating a canyon with a tropical mountain climate."
+  },
+  {
+    "id": 7,
+    "isFavorite": false,
+    "name": "Mount Fuji",
+    "location": "Fuji, Japan",
+    "price": "$270",
+    "imageName": "mountfuji",
+    "rating": "4.7",
+    "ratingCount": "4.7k reviews",
+    "duration": "7h",
+    "weather": "Snowy",
+    "weatherIcon": "cloud.snow.fill",
+    "weatherTemperature": "5 C",
+    "category": {
+      "id": 5,
+      "name": "Mountain",
+      "icon": "⛰"
     },
-    {
-        "id": 7,
-        "isFavorite": false,
-        "name": "Mount Fuji",
-        "location": "Fuji, Japan",
-        "price": "$270",
-        "imageName": "mountfuji",
-        "rating": "4.7",
-        "ratingCount": "4.7k reviews",
-        "duration": "7h",
-        "weather": "Snowy",
-        "weatherIcon": "cloud.snow.fill",
-        "weatherTemperature": "5 C",
-        "category": {
-            "id": 5,
-            "name": "Mountain",
-            "icon": "⛰"
-        },
-        "description": "Mount Fuji, located on the island of Honshū, is the highest mountain in Japan, standing 3,776.24 m (12,389.2 ft). It is the second-highest volcano located on an island in Asia (after Mount Kerinci on the island of Sumatra), and seventh-highest peak of an island on Earth. Mount Fuji is an active stratovolcano that last erupted from 1707 to 1708. The mountain is located about 100 km (62 mi) southwest of Tokyo and is visible from there on clear days. Mount Fujis exceptionally symmetrical cone, which is covered in snow for about five months of the year, is commonly used as a cultural icon of Japan and it is frequently depicted in art and photography, as well as visited by sightseers and climbers."
-    }
+    "description": "Mount Fuji, located on the island of Honshū, is the highest mountain in Japan, standing 3,776.24 m (12,389.2 ft). It is the second-highest volcano located on an island in Asia (after Mount Kerinci on the island of Sumatra), and seventh-highest peak of an island on Earth. Mount Fuji is an active stratovolcano that last erupted from 1707 to 1708. The mountain is located about 100 km (62 mi) southwest of Tokyo and is visible from there on clear days. Mount Fujis exceptionally symmetrical cone, which is covered in snow for about five months of the year, is commonly used as a cultural icon of Japan and it is frequently depicted in art and photography, as well as visited by sightseers and climbers."
+  }
 ]

@@ -8,44 +8,44 @@
 import SwiftUI
 
 struct CategoryDestination: Hashable, Codable, Identifiable {
-    var id: Int
-    var name: String
-    var icon: String
+  let id: Int
+  let name: String
+  let icon: String
 }
 
 struct Profile {
-    var name: String
-    var githubLabel: String
-    var email: String
-    var avatarName: String
-    var avatar: Image {
-        Image(avatarName)
-    }
-    var githubLink: String {
-        return "https://\(githubLabel)"
-    }
+  let name: String
+  let githubLabel: String
+  let email: String
+  let avatarName: String
+  var avatar: Image {
+    Image(avatarName)
+  }
+  var githubLink: String {
+    return "https://\(githubLabel)"
+  }
 }
 
 struct Destination: Hashable, Codable, Identifiable {
-    var id: Int
-    var isFavorite: Bool
-    var name: String
-    var location: String
-    var price: String
-    var description: String
-    
-    var rating: String
-    var ratingCount: String
-    var duration: String
-    
-    var weather: String
-    var weatherIcon: String
-    var weatherTemperature: String
-    
-    var category: CategoryDestination
-    
-    private var imageName: String
-    var image: Image {
-        Image(imageName)
-    }
+  let id: Int
+  var isFavorite: Bool
+  let name: String
+  let location: String
+  let price: String
+  let description: String
+
+  let rating: String
+  let ratingCount: String
+  let duration: String
+
+  let weather: String
+  let weatherIcon: String
+  let weatherTemperature: String
+
+  let category: CategoryDestination
+
+  private let imageName: String
+  var image: Image {
+    Image(imageName)
+  }
 }
