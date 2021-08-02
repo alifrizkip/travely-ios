@@ -15,13 +15,13 @@ Hardware & Tools I used:
 # Screenshots
 
 ## Homepage
-<img src="https://user-images.githubusercontent.com/18460240/127771778-2b58529b-36f1-4d24-a283-4e6265c5b714.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/18460240/127771778-2b58529b-36f1-4d24-a283-4e6265c5b714.png" width="400" />.    <img src="https://user-images.githubusercontent.com/18460240/127771784-ac923489-148a-495b-9f1e-1c099bafd886.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/18460240/127771784-ac923489-148a-495b-9f1e-1c099bafd886.png" width="400" />
+<img src="https://user-images.githubusercontent.com/18460240/127771778-2b58529b-36f1-4d24-a283-4e6265c5b714.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/18460240/127771778-2b58529b-36f1-4d24-a283-4e6265c5b714.png" width="45%" />.    <img src="https://user-images.githubusercontent.com/18460240/127771784-ac923489-148a-495b-9f1e-1c099bafd886.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/18460240/127771784-ac923489-148a-495b-9f1e-1c099bafd886.png" width="45%" />
 
 ## Detail
-<img src="https://user-images.githubusercontent.com/18460240/127771787-63e5bbc2-bff7-48f5-ad3e-4d8d54da8dd9.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/18460240/127771787-63e5bbc2-bff7-48f5-ad3e-4d8d54da8dd9.png" width="400" />.    <img src="https://user-images.githubusercontent.com/18460240/127771791-16d3b0a9-cba4-4093-b445-a646d1bf3288.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/18460240/127771791-16d3b0a9-cba4-4093-b445-a646d1bf3288.png" width="400" />
+<img src="https://user-images.githubusercontent.com/18460240/127771787-63e5bbc2-bff7-48f5-ad3e-4d8d54da8dd9.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/18460240/127771787-63e5bbc2-bff7-48f5-ad3e-4d8d54da8dd9.png" width="45%" />.    <img src="https://user-images.githubusercontent.com/18460240/127771791-16d3b0a9-cba4-4093-b445-a646d1bf3288.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/18460240/127771791-16d3b0a9-cba4-4093-b445-a646d1bf3288.png" width="45%" />
 
 ## Wishlist
-<img src="https://user-images.githubusercontent.com/18460240/127771795-23944be8-9d60-479a-a616-6d4f5a6f8a9d.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/18460240/127771795-23944be8-9d60-479a-a616-6d4f5a6f8a9d.png" width="400" />
+<img src="https://user-images.githubusercontent.com/18460240/127771795-23944be8-9d60-479a-a616-6d4f5a6f8a9d.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/18460240/127771795-23944be8-9d60-479a-a616-6d4f5a6f8a9d.png" width="45%" />
 
 ## About me
-<img src="https://user-images.githubusercontent.com/18460240/127771797-b0996b2c-cda2-469d-9219-0a4381b8393b.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/18460240/127771797-b0996b2c-cda2-469d-9219-0a4381b8393b.png" width="400" />
+<img src="https://user-images.githubusercontent.com/18460240/127771797-b0996b2c-cda2-469d-9219-0a4381b8393b.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/18460240/127771797-b0996b2c-cda2-469d-9219-0a4381b8393b.png" width="45%" />
